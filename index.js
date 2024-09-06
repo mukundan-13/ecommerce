@@ -1,32 +1,36 @@
-const buttons = document.querySelectorAll(".btn");
-const boxes = document.querySelectorAll(".box");
-const searchbox = document.querySelector("#search");
+document.addEventListener('DOMContentLoaded', function() {
+    // Image slider functionality
+    const sliderImages = document.querySelectorAll('.img-slider .img');
+    let currentIndex = 0;
 
+    function showSlide(index) {
+        sliderImages.forEach((img, i) => {
+            img.style.transform = `translateX(${-100 * index}%)`;
+        });
+    }
 
-function filterItems() {
-    
-    const filterValue = document.querySelector(".btn-clicked").dataset.filter;
-    const searchText = searchbox.value.toLowerCase().trim();
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % sliderImages.length;
+        showSlide(currentIndex);
+    }
 
-    boxes.forEach(box => {
-        const itemType = box.dataset.item.toLowerCase();       
-        const matchesFilter = filterValue === 'all' || itemType === filterValue;
-        const matchesSearch = itemType.includes(searchText);   
-        if (matchesFilter && matchesSearch) {
-            box.style.display = "block";
-        } else {
-            box.style.display = "none";
-        }
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + sliderImages.length) % sliderImages.length;
+        showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+    // Menu toggle functionality for mobile
+    const menuToggle = document.querySelector('.heading1 ion-icon');
+    const menu = document.querySelector('.menu');
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('show');
     });
-}
-buttons.forEach(button => {
-    button.addEventListener("click", (e) => {
-        
-        document.querySelector(".btn-clicked").classList.remove("btn-clicked");
-        button.classList.add("btn-clicked");
-        filterItems(); 
+
+    const closeMenu = document.querySelector('.menu .close');
+    closeMenu.addEventListener('click', () => {
+        menu.classList.remove('show');
     });
 });
-
-
-searchbox.addEventListener("keyup", filterItems);

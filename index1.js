@@ -35,7 +35,6 @@ function addToCart() {
     if (quantity < 1 || quantity > maxQuantity) {
         document.getElementById('cart-message').innerText = `You can only add up to ${maxQuantity} items to the cart.`;
     } else {
-        // Logic to add the item to the cart goes here
         document.getElementById('cart-message').innerText = `${quantity} item(s) added to cart.`;
     }
 }
