@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="product-container">
+        <h1>Shoes</h1>
+        <div class="product-images">
+            <img id="main-image" src="ecom/rshoe1.jpeg" alt="Product Image">
+        </div>
+        <br><br><br>
+        <div class="image-thumbnails">
+            <img id="i1" class="thumbnail" src="ecom/rshoe1.jpeg" alt="Side View 1" onclick="changeImage('ecom/rshoe1.jpeg')">
+            <img id="i2" class="thumbnail" src="ecom/rshoe2.jpeg" alt="Side View 2" onclick="changeImage('ecom/rshoe2.jpeg')">
+            <img id="i3" class="thumbnail" src="ecom/rshoe3.jpeg" alt="Side View 3" onclick="changeImage('ecom/rshoe3.jpeg')">
+        </div>
+        <div class="color-options">
+            <button id="black" onclick="changeColor('color1')">Black</button>
+            <button id="blue" onclick="changeColor('color2')">Blue</button>
+        </div>
+        <p id="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, quas est quasi aspernatur a suscipit provident culpa? Beatae, sapiente eum quibusdam repellat cupiditate repudiandae placeat, debitis officiis similique voluptatem possimus.
+        Quis earum aliquam quasi corrupti quae! Totam recusandae exercitationem pariatur porro! Reiciendis sit, vero, doloribus odio possimus aliquid numquam harum nesciunt libero eveniet architecto minima, consectetur odit! Molestias, molestiae! Cupiditate.
+        Architecto deserunt delectus in odio, ipsum consectetur hic laudantium perferendis quidem obcaecati quis nesciunt ab, fugiat, illum maxime minus harum soluta tenetur omnis itaque exercitationem autem! Itaque facere voluptatem labore.
+        Modi saepe dolorum sapiente? Dolorum eaque molestiae, quo perspiciatis corrupti ab dicta repellendus excepturi fugiat aliquam officiis sit odio libero incidunt suscipit, iure est illo delectus. Natus sint eaque eum!
+        Laborum dolor amet nobis, mollitia cupiditate debitis impedit ducimus doloribus a ab ea veniam cum provident architecto error corrupti molestiae asperiores harum dolorem, consequatur molestias autem maxime veritatis. Vitae, optio.</p>
+        <div class="cart-section">
+            <input type="number" id="quantity" min="1" max="5" value="1">
+            <button onclick="addToCart()">Add to Cart</button>
+            <p id="cart-message"></p>
+        </div>
+    </div>
+    <script src="index1.js"></script>
+</body>
+</html>
