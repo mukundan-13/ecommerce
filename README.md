@@ -86,5 +86,5 @@ Therefore, the estimated peak traffic is approximately **12 requests per second*
 
 ## 4. High Level System Architecture
 
-<img width="662" height="1142" alt="Untitled Diagram drawio (1)" src="https://github.com/user-attachments/assets/2718f2ae-ddf0-4ac2-b2be-fb6c8540429e" />
+<img width="662" height="1142" alt="Untitled Diagram drawio (1)" src="https://github.com/user-attachments/assets/c6b36cd7-0181-4034-9b1b-276d0d81e7e0" />
 
