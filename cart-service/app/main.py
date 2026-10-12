@@ -5,14 +5,14 @@ from fastapi import Depends, FastAPI, HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.database import Base, engine
-from app.models import CartItem
-from app.schemas import (
+from database import Base, engine
+from models import CartItem
+from schemas import (
     CartItemAdd,
     CartItemUpdate,
     CartItemResponse,
 )
-from app.security import get_current_user
+from security import get_current_user
 import os
 import grpc
 
@@ -33,7 +33,7 @@ app = FastAPI(
 
 
 def get_db():
-    from app.database import SessionLocal
+    from database import SessionLocal
 
     db = SessionLocal()
     try:

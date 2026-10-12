@@ -2,7 +2,7 @@
 from sqlalchemy import Integer, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
-from app.database import Base
+from database import Base
 
 
 class CartItem(Base):
